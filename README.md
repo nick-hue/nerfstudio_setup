@@ -27,9 +27,14 @@ conda --version
 ## Create conda environment 
 The conda environment for nerfstudio will be created via the `environment.yml` file with the following command
 > **_NOTE:_**  `ffmpeg` is commented out from the installation, you might need to install it yourself for some commands
+
+[Installing ffmpeg](#installing-ffmpeg)
 ```
 conda env create -f environment.yml
 ```
+
+
+
 When everything has been installed, activate the conda environment.
 ```
 conda activate nerfstudio
@@ -74,4 +79,10 @@ ns-install-cli
 Check installation:
 ```
 ns-train --help
+```
+
+## Installing ffmpeg
+Use the following command to install `ffmpeg` through conda
+```
+conda install conda-forge::ffmpeg
 ```
