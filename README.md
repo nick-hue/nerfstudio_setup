@@ -1,19 +1,18 @@
 # Nerfstudio installation using conda
-This guide explains how to setup nerfstudio with conda with a prexisting environment file.
+This guide explains how to setup nerfstudio with conda with a prexisting environment file (`environment.yml`).
 
 
 ## Install conda
-Installing miniconda since it's a lighter version of anaconda environment manager
+Installing the latest miniconda since it's a lighter version of anaconda environment manager
 ```
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
 ```
-
-
+Make the installer executable and run it
 ```
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
 ```
-
+Initialize conda for your current shell session
 ```
 eval "$(/home/`<your_username>`/miniconda3/bin/conda shell.$(basename $SHELL) hook)"
 ```
@@ -31,15 +30,12 @@ The conda environment for nerfstudio will be created via the `environment.yml` f
 ```
 conda env create -f environment.yml
 ```
-After some time everything will be installed.
-
-
-Activate the conda environment.
+When everything has been installed, activate the conda environment.
 ```
 conda activate nerfstudio
 ```
 
-## Install nerfstudio
+## Setting up nerfstudio
 ### Install pytorch 
 From the nerfstudio documentation, upgrading pip, checking that pytorch is not installed and installing pytorch with cuda support.
 ```
@@ -60,7 +56,7 @@ Install the torch bindings for `tiny-cuda-nn`:
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
 
-### Installing nerfstudio from source
+### Install nerfstudio from source
 
 
 ```
